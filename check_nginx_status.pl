@@ -16,8 +16,10 @@ use FindBin;
 
 
 # Nagios specific
+require 5.6.0;
+use lib qw( /usr/lib/nagios/plugins );
+use utils qw(%ERRORS $TIMEOUT &print_revision &support &usage);
 use lib $FindBin::Bin;
-use utils qw($TIMEOUT);
 
 # Globals
 my $Version='0.9';
